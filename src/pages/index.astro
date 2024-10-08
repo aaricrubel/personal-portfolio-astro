@@ -17,7 +17,6 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			}
 			.name-header {
 				color: #4545E2;
-				padding: 1rem;
 				font-size: 1.5rem;
 				font-weight: bold;
 			}
@@ -38,7 +37,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				order: 1;
 			}
 			h1 {
-				font-size: 2.5rem;
+				font-size: 2rem;
 				margin: 0 0 1rem 0;
 				line-height: 1.2;
 			}
@@ -67,13 +66,20 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 			p {
 				margin: 0 0 1rem 0;
 			}
+			.hideMWeb{
+					display: none;
+				}
+			.hideWeb{
+					display: block;
+					margin-bottom: 0.5rem;
+				}
 			@media (min-width: 768px) {
 				.container {
 					flex-direction: row;
 					padding: 2rem 1rem;
 				}
 				.sidebar {
-					width: 250px;
+					width: 300px;
 					margin-right: 4rem;
 					margin-bottom: 0;
 					order: 1;
@@ -85,15 +91,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				h1 {
 					font-size: 4rem;
 				}
+				.hideWeb{
+					display: none;
+				}
+				.hideMWeb{
+					display: block;
+				}
 			}
 		</style>
 	</head>
 	<body>
-		<div class="name-header">
-			Abhinav Mukherjee
-		</div>
 		<main class="container">
 			<div class="main-content">
+				<div class="name-header hideWeb">
+			Abhinav Mukherjee
+		</div>
 				<h1>Hi!</h1>
 				<p>I'm a curious person. By profession, I'm a Product Manager.</p>
 				<p>I build consumer products inside of startups.</p>
@@ -101,6 +113,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 				<p><a href="#now">Now</a>: What I'm currently upto</p>
 			</div>
 			<aside class="sidebar">
+					<div class="name-header hideMWeb">
+			Abhinav Mukherjee
+		</div>
 				<section>
 					<h2>Overview</h2>
 					<ul>
